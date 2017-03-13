@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget id="com.etaminstudio.lscp.idevxxi" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.etaminstudio.lscp.idevxxi" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
 
     <name>LSCP iDevXXI</name>
 
     <description>
-        Experiments with babies -- multilingually compatible version without progress bar Cam
+        Experiments with kids -- ambigous prosody exp Naomi
     </description>
 
     <author email="hans@etaminstudio.com" href="http://etaminstudio.com">

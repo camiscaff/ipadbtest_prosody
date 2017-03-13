@@ -47,7 +47,7 @@ LSCP.View.WordComprehensionGame = LSCP.View.Game.extend({
       sounds.push(['object_' + object, {
         urls: [LSCP.Locations.GameObjectSoundSprites + object + '.mp3'],
         sprite: {
-          ask:   [0, 2000],
+          ask:   [0, 5500], //formerly 2000
           intro: [3000, 2000]
         }
       }]);
@@ -235,7 +235,7 @@ LSCP.View.WordComprehensionGame = LSCP.View.Game.extend({
     });
 
     // Progress
-    //if (this.current_stage === 0) this.game_session.set({progress: 0});//IMPORTANT!! PROGRESS BAR REMOVED TO SPEED UP
+    if (this.current_stage === 0) this.game_session.set({progress: 0});//IMPORTANT!! PROGRESS BAR REMOVED TO SPEED UP // edit: put back on
 
     // Set idle time for the current stage
     this.idleTime = stage.get('time_idle');
@@ -434,8 +434,8 @@ LSCP.View.WordComprehensionGame = LSCP.View.Game.extend({
     }
 
     // Progress //IMPORTANT!! PROGRESS BAR REMOVED TO SPEED UP
-    //var progress = 100 / level.get('stages').length * (this.current_stage+1);
-    //this.game_session.set({progress: Math.floor(progress)});
+    var progress = 100 / level.get('stages').length * (this.current_stage+1);
+    this.game_session.set({progress: Math.floor(progress)});
 
     // Display queue
     collie.Timer.queue().
@@ -548,8 +548,8 @@ LSCP.View.WordComprehensionGame = LSCP.View.Game.extend({
 
           case 'CONTINUE':
             // Progress//IMPORTANT!! PROGRESS BAR REMOVED TO SPEED UP
-            //var progress = 100 / level.get('stages').length * (this.current_stage+1);
-            //this.game_session.set({progress: Math.floor(progress)});
+            var progress = 100 / level.get('stages').length * (this.current_stage+1);
+            this.game_session.set({progress: Math.floor(progress)});
 
             this.nextStage();
             break;
